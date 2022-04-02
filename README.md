@@ -22,7 +22,7 @@ PZEM-017 používá pro komunikaci rozhraní RS485 a standardně bychom museli s
 To je pro nás tedy zbytečné a můžeme odstranit RS485 přímo z PZEM a použít přímo jeho UART.  
 Odstraníme tedy RS485 rozhraní přímo ze základní desky a díky tomu můžeme a musíme pracovat s napětím 3V namísto původních 5V.  
 
-1. odstraňte IO U5 a rezistor R19 (na U5 stačí odpájet pin1 a R19 na mém PZEM017 nebyl vůbec osazen)   
+** 1. odstraňte IO U5 a rezistor R19 (na U5 stačí odpájet pin1 a R19 na mém PZEM017 nebyl vůbec osazen) **
 
 ![obrazek](https://user-images.githubusercontent.com/58307338/161390331-cfa6a7f1-9662-453b-9f1b-0a01661cdbd1.png)
 
