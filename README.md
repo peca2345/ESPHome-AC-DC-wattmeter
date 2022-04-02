@@ -2,9 +2,9 @@
 
 ## Popis:
 
-Následující postup je uplatněn pro měření DC (FVE) a AC (ze sítě) výkonu dodaného pro Bojler s AC/DC spirálou.  
-Mezi FVE a bojlerem je regulátor bez měniče. Do bojelru příchází stejnosměrné napětí.  
-Měření DC je realizováno pomocí PZEM-017 a AC PZEM-004Tv3.  
+- následující postup je uplatněn pro měření DC (FVE) a AC (ze sítě) výkonu dodaného pro Bojler s AC/DC spirálou
+- mezi FVE a bojlerem je regulátor bez měniče. Do bojelru příchází stejnosměrné napětí 
+- měření DC je realizováno pomocí PZEM-017 a AC PZEM-004Tv3
 
 ## Zařízení:
 - Bojler - Dražice LX ACDC/M+K 160l [manual](https://www.dzd-fv.cz/images/pdf/Navod_LX_ACDC_M_MKW_9_12_2020_CZ_6735552.pdf) [eshop](https://www.solar-eshop.cz/p/fotovoltaicky-ohrivac-lx-acdc-m-k-abc-160/)  
@@ -40,14 +40,14 @@ Měření DC je realizováno pomocí PZEM-017 a AC PZEM-004Tv3.
 
 <img align="right" src="https://user-images.githubusercontent.com/58307338/161399115-7f604a6b-4fb5-4c64-a20c-d4d6b986b9b6.png">
 
-Odteď bude tedy na svorce A signál TX a na svorce B RX.  
-Na ESP připojte GPIO1 (TX) na svorku B (RX) a GPIO3 (RX) na svorku A (TX)  
-Myslete na to že se již PZEM017 nenapájí 5V ale jen 3V z ESP - jinak nebude wattmetr funkční!!  
+- odteď bude tedy na svorce A signál TX a na svorce B RX
+- na ESP připojte GPIO1 (TX) na svorku B (RX) a GPIO3 (RX) na svorku A (TX)  
+- myslete na to že se již PZEM017 nenapájí 5V ale jen 3V z ESP - jinak nebude wattmetr funkční!!  
 
-Po správném zapojení nahrajte postupně program pro PZEM017 a zvlášť pro PZEM004 abych si ověřili funkčnost zapojení.  
-Pracuji s ESP32 který má jeden volný UART (gpio16,17) navíc a proto mohu mít zapnutý i logger.  
-Pokud používáte ESP8266 tak jediný UART používá logger a pokud ho chcete uvolnit pro PZEM tak ho musíte vypnout!  
-Konfigy dále pracují s použitím druhého UARTU pro PZEM a k tomu zapnutý logger.  
+- po správném zapojení nahrajte postupně program pro PZEM017 a zvlášť pro PZEM004 abych si ověřili funkčnost zapojení  
+- pracuji s ESP32 který má jeden volný UART (gpio16,17) navíc a proto mohu mít zapnutý i logger 
+- pokud používáte ESP8266 tak jediný UART používá logger a pokud ho chcete uvolnit pro PZEM tak ho musíte vypnout!
+- v esphome dále pracuji s použitím druhého UARTU pro PZEM a k tomu zapnutý logger
 
 Vypnutí loggeru:  
 
@@ -59,8 +59,9 @@ logger:
 
 
 **ESPHome yaml PZEM017:**  
-Aby PZEM v HA zobrazoval hodnoty tak musí být přivedeno DC napětí na svorky pro měření!  
-Konkrétně jde o dvě krajní svorkovnice na straně microUSB konektoru. (první plus, druhá mínus)  
+
+- aby PZEM v HA zobrazoval hodnoty tak musí být přivedeno DC napětí na svorky pro měření!  
+- konkrétně jde o dvě krajní svorkovnice na straně microUSB konektoru. (první plus, druhá mínus)  
 
 ```
 logger:
@@ -126,6 +127,7 @@ sensor:
 Pokud tedy vše funguje potřebujeme u PZEM004T změnit adresu jelikož mají oba PZEM defaultní stejnou 0x01 adresu.  
 
 **PZEM004Tv3 - změna adresy**
+
 - vymažemé původní kód a nahradíme sekvencí pro automatické přepsání adresy po bootu
 - jakmile nahrajeme do ESP tak ho restartujeme a sekvenci vymažeme a vložíme konfig pro PZEM017 i PZEM004T
 
@@ -180,6 +182,7 @@ modbus_controller:
 ```
 
 **ESPHome - PZEM017 + PZEM004Tv3:**
+
 - nahrajeme configy pro oba wattmetry
 - u PZEM004T jsme změnili adresu na 0x03 tak to musíme zohlednit v kódu nastavením adresy
 
