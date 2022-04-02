@@ -20,11 +20,11 @@ Měření DC je realizováno pomocí PZEM-017 a AC PZEM-004Tv3.
 
 ## ESP32E 1ch relay board:
 
-Z neznámého důvodu je relé připojeno na UART2_RX - GPIO16.  
-Díky tomu při používání UARTu pro PZEM dochází ke spínání relé.  
-Rešením je přerušení cesty mezi GPIO16 a relé. V případě potřeby použití relé můžete cestu napojit na jiný GPIO.  
+- z neznámého důvodu je relé připojeno na UART2_RX - GPIO16.  
+- díky tomu při používání UARTu pro PZEM dochází ke spínání relé.  
+- řešením je přerušení cesty mezi GPIO16 a relé. V případě potřeby použití relé můžete cestu napojit na jiný GPIO.  
 
-<img align="right" src="https://user-images.githubusercontent.com/58307338/161399294-d6a7c2da-280d-4cb1-b927-bd970b2a0270.png">
+[img](https://user-images.githubusercontent.com/58307338/161399294-d6a7c2da-280d-4cb1-b927-bd970b2a0270.png)
 
 ## PZEM-017 DC wattmeter:  
 
