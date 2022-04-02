@@ -29,7 +29,6 @@ Odstraníme tedy RS485 rozhraní přímo ze základní desky a díky tomu může
 **2. propojte optočlen U1 (pin4) s R19 (pin A) a  U2 (pin2) s R19 (pin B)** 
 
 <img align="right" src="https://user-images.githubusercontent.com/58307338/161390733-d5335ec2-fc3a-471d-a5dd-d74d15787c85.png">
-
 Odteď bude tedy na svorce A signál TX a na svorce B RX.  
 Na ESP připojte GPIO1 (TX) na svorku B (RX) a GPIO3 (RX) na svorku A (TX)  
 Myslete na to že se již PZEM017 nenapájí 5V ale jen 3V z ESP - jinak nebude wattmetr funkční!!  
