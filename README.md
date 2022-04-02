@@ -28,8 +28,7 @@ Odstraníme tedy RS485 rozhraní přímo ze základní desky a díky tomu může
 
 **2. propojte optočlen U1 (pin4) s R19 (pin A) a  U2 (pin2) s R19 (pin B)** 
 
-![obrazek](https://user-images.githubusercontent.com/58307338/161390733-d5335ec2-fc3a-471d-a5dd-d74d15787c85.png)
-
+<img align="right" src="https://user-images.githubusercontent.com/58307338/161390733-d5335ec2-fc3a-471d-a5dd-d74d15787c85.png">
 
 Odteď bude tedy na svorce A signál TX a na svorce B RX.  
 Na ESP připojte GPIO1 (TX) na svorku B (RX) a GPIO3 (RX) na svorku A (TX)  
@@ -207,3 +206,17 @@ sensor:
     update_interval: 1s
     address: 0x03 # adresa na kterou jsme manuálně přepsali 
 ```
+
+
+# ZDROJE:
+
+[link](https://github.com/Gio-dot/PZEM-016-OLED-2-OUT-ESPHome/blob/master/wemos_d1_pzem016_display.yaml)
+[link](https://github.com/arendst/Tasmota/issues/3694)
+[link](https://hassiohelp.eu/2019/03/27/pzem-016/)
+[link](https://github.com/Gio-dot/PZEM-016-OLED-2-OUT-ESPHome)
+[link](https://esphome.io/components/sensor/pzemdc.html)
+[link]()
+[link]()
+
+
+
