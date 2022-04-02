@@ -16,7 +16,7 @@
 
 ## Zapojení:
 
-![schema](https://user-images.githubusercontent.com/58307338/161404687-976f83e8-39fc-4fd1-8adb-8de5fa287217.png)
+![schema](https://user-images.githubusercontent.com/58307338/161404734-b1ac942c-06c4-479f-bc0d-8698cd860d19.png)
 
 ## ESP32E 1ch relay board:
 
