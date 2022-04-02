@@ -221,11 +221,11 @@ sensor:
 ```
 
 
-# ZDROJE:
+# Zdroje:
 
-[pzem16](https://github.com/Gio-dot/PZEM-016-OLED-2-OUT-ESPHome/blob/master/wemos_d1_pzem016_display.yaml)  
-[tasmota](https://github.com/arendst/Tasmota/issues/3694)  
-[pzem16](https://hassiohelp.eu/2019/03/27/pzem-016/)  
-[pzem16](https://github.com/Gio-dot/PZEM-016-OLED-2-OUT-ESPHome)  
-[esphome](https://esphome.io/components/sensor/pzemdc.html)  
+- pzem16: [link](https://github.com/Gio-dot/PZEM-016-OLED-2-OUT-ESPHome/blob/master/wemos_d1_pzem016_display.yaml)  
+- tasmota: [link](https://github.com/arendst/Tasmota/issues/3694)  
+- pzem16: [link](https://hassiohelp.eu/2019/03/27/pzem-016/)  
+- pzem16: [link](https://github.com/Gio-dot/PZEM-016-OLED-2-OUT-ESPHome)  
+- esphome: [link](https://esphome.io/components/sensor/pzemdc.html)  
 
