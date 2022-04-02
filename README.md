@@ -10,9 +10,9 @@
 - Bojler - Dražice LX ACDC/M+K 160l [manual](https://www.dzd-fv.cz/images/pdf/Navod_LX_ACDC_M_MKW_9_12_2020_CZ_6735552.pdf) [eshop](https://www.solar-eshop.cz/p/fotovoltaicky-ohrivac-lx-acdc-m-k-abc-160/)  
 - FV panely: 6ks Schutten Poly 250Wp  
 - MPPT regulátor Power Max   
-- ESP32 1ch relay board   
-- DC wattmetr PZEM-017v1 DC 0-300V / 0-300A  
-- AC wattmetr PZEM-004Tv3 AC 80-260V / 0-100A 
+- ESP32E-wroom 1ch relay board - [ali](https://www.aliexpress.com/item/1005003721826557.html?spm=a2g0o.order_list.0.0.21ef1802yxt8wg)
+- DC wattmetr PZEM-017v1 DC 0-300V / 0-300A - [ali](https://www.aliexpress.com/item/1005003512627513.html?dp=61e453ee0fa2025c4ba43400&cn=ah&aff_fcid=626c53d6b82b4d029f71e5c94dd8dfed-1648930593001-05156-_d6jWDbY&aff_fsk=_d6jWDbY&aff_platform=link-c-tool&sk=_d6jWDbY&aff_trace_key=626c53d6b82b4d029f71e5c94dd8dfed-1648930593001-05156-_d6jWDbY&terminal_id=0e7620c244a44f52b506ba9c9eb9f926&afSmartRedirect=y)
+- AC wattmetr PZEM-004Tv3 AC 80-260V / 0-100A - [ali](https://www.aliexpress.com/item/1005001679001504.html?spm=a2g0o.productlist.0.0.27102053wp4zqV&algo_pvid=71bd0ff3-da56-4414-ac5f-75eadfdb85b4&algo_exp_id=71bd0ff3-da56-4414-ac5f-75eadfdb85b4-0&pdp_ext_f=%7B%22sku_id%22%3A%2212000017094012325%22%7D&pdp_pi=-1%3B182.3%3B-1%3B-1%40salePrice%3BCZK%3Bsearch-mainSearch)
 
 ## Zapojení:
 
