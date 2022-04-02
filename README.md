@@ -184,8 +184,8 @@ modbus_controller:
 
 **ESPHome - PZEM017 + PZEM004Tv3:**
 
-- nahrajeme configy pro oba wattmetry
-- u PZEM004T jsme změnili adresu na 0x03 tak to musíme zohlednit v kódu nastavením adresy
+- nahrajeme kód pro oba wattmetry
+- u PZEM004T jsme změnili adresu na 0x03 tak to musíme zohlednit v kódu manuálním nastavením adresy wattmetru
 
 ```
 logger:
