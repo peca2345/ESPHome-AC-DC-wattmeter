@@ -1,10 +1,10 @@
-# ESPHome AC/DC wattmeter pro FVE
+# ESPHome - AC/DC wattmeter pro FVE
 
 ## Popis:
 
 - následující postup je uplatněn pro měření DC (FVE) a AC (ze sítě) výkonu dodaného pro Bojler s AC/DC spirálou
 - mezi FVE a bojlerem je regulátor bez měniče. Do bojelru příchází stejnosměrné napětí 
-- měření DC je realizováno pomocí PZEM-017 a AC PZEM-004Tv3
+- DC měření ze solárních panelů je realizováno pomocí PZEM-017v1 a AC ze sítě díky PZEM-004Tv3
 
 ## Zařízení:
 - Bojler - Dražice LX ACDC/M+K 160l [manual](https://www.dzd-fv.cz/images/pdf/Navod_LX_ACDC_M_MKW_9_12_2020_CZ_6735552.pdf) [eshop](https://www.solar-eshop.cz/p/fotovoltaicky-ohrivac-lx-acdc-m-k-abc-160/)  
