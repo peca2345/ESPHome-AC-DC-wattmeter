@@ -11,8 +11,8 @@ Měření DC je realizováno pomocí PZEM-017 a AC PZEM-004Tv3.
 - FV panely: 6ks Schutten Poly 250Wp  
 - MPPT regulátor Power Max   
 - ESP32 1ch relay board   
-- Wattmetr PZEM-017v1 DC 0-300V / 0-300A  
-- wattmetr PZEM-004Tv3 AC 80-260V / 0-100A 
+- DC wattmetr PZEM-017v1 DC 0-300V / 0-300A  
+- AC wattmetr PZEM-004Tv3 AC 80-260V / 0-100A 
 
 ## Zapojení:
 
