@@ -1,4 +1,4 @@
-# ESPHome AC/DC wattmeter 
+# ESPHome AC/DC wattmeter (FVE)
 
 ## Popis:
 
