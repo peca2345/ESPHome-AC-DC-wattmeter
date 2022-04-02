@@ -6,17 +6,27 @@ Následující postup je uplatněn pro měření DC (FVE) a AC (ze sítě) výko
 Mezi FVE a bojlerem je regulátor bez měniče. Do bojelru příchází stejnosměrné napětí.  
 Měření DC je realizováno pomocí PZEM-017 a AC PZEM-004Tv3.  
 
-Bojler - Dražice LX ACDC/M+K 160l  
-manual: [link](https://www.dzd-fv.cz/images/pdf/Navod_LX_ACDC_M_MKW_9_12_2020_CZ_6735552.pdf)
-eshop: [link](https://www.solar-eshop.cz/p/fotovoltaicky-ohrivac-lx-acdc-m-k-abc-160/)
+## Zařízení:
+- Bojler - Dražice LX ACDC/M+K 160l [manual](https://www.dzd-fv.cz/images/pdf/Navod_LX_ACDC_M_MKW_9_12_2020_CZ_6735552.pdf) [eshop](https://www.solar-eshop.cz/p/fotovoltaicky-ohrivac-lx-acdc-m-k-abc-160/)  
+- FV panely: 6ks Schutten Poly 250Wp  
+- MPPT regulátor Power Max   
+- ESP32 1ch relay board   
+- Wattmetr PZEM-017v1 DC 0-300V / 0-300A  
+- wattmetr PZEM-004Tv3 AC 80-260V / 0-100A 
 
-FV panely: 6ks Schutten Poly 250Wp  
-MPPT regulátor Power Max:  
+## Zapojení:
 
-ESP32E board:  
-![obrazek](https://user-images.githubusercontent.com/58307338/161389309-b47f301a-1040-422f-8a99-f0ece91003fe.png)
+![schema](https://user-images.githubusercontent.com/58307338/161399144-c7f32090-afcf-4360-a1a0-9e27996f3412.png)
 
-## PZEM-017 DC wattmeter - odstranění RS485:  
+## ESP32E 1ch relay board:
+
+Z neznámého důvodu je relé připojeno na UART2_RX - GPIO16.  
+Díky tomu při používání UARTu pro PZEM dochází ke spínání relé.  
+Rešením je přerušení cesty mezi GPIO16 a relé. V případě potřeby použití relé můžete cestu napojit na jiný GPIO.  
+
+<img align="right" src="https://user-images.githubusercontent.com/58307338/161399294-d6a7c2da-280d-4cb1-b927-bd970b2a0270.png">
+
+## PZEM-017 DC wattmeter:  
 
 PZEM-017 používá pro komunikaci rozhraní RS485 a standardně bychom museli signál převést z RS485 přes převodník zpět na UART.  
 To je pro nás tedy zbytečné a můžeme odstranit RS485 přímo z PZEM a použít přímo jeho UART.  
@@ -24,10 +34,12 @@ Odstraníme tedy RS485 rozhraní přímo ze základní desky a díky tomu může
 
 **1. odstraňte IO U5 a rezistor R19 (na U5 stačí odpájet pin1 a R19 na mém PZEM017 nebyl vůbec osazen)**
 
-![obrazek](https://user-images.githubusercontent.com/58307338/161390331-cfa6a7f1-9662-453b-9f1b-0a01661cdbd1.png)
+![removeU5](https://user-images.githubusercontent.com/58307338/161399111-db25c8f7-ec0b-4754-973d-85968283fbed.png)
 
 **2. propojte optočlen U1 (pin4) s R19 (pin A) a  U2 (pin2) s R19 (pin B)**
-<img align="right" src="https://user-images.githubusercontent.com/58307338/161390733-d5335ec2-fc3a-471d-a5dd-d74d15787c85.png">
+
+<img align="right" src="https://user-images.githubusercontent.com/58307338/161399115-7f604a6b-4fb5-4c64-a20c-d4d6b986b9b6.png">
+
 Odteď bude tedy na svorce A signál TX a na svorce B RX.  
 Na ESP připojte GPIO1 (TX) na svorku B (RX) a GPIO3 (RX) na svorku A (TX)  
 Myslete na to že se již PZEM017 nenapájí 5V ale jen 3V z ESP - jinak nebude wattmetr funkční!!  
@@ -46,7 +58,7 @@ logger:
 ```
 
 
-**ESPHome - PZEM017:**  
+**ESPHome yaml PZEM017:**  
 Aby PZEM v HA zobrazoval hodnoty tak musí být přivedeno DC napětí na svorky pro měření!  
 Konkrétně jde o dvě krajní svorkovnice na straně microUSB konektoru. (první plus, druhá mínus)  
 
@@ -72,7 +84,7 @@ sensor:
     update_interval: 1s
 ```
 
-**ESPHome - PZEM004Tv3:** 
+**ESPHome yaml PZEM004Tv3:** 
 
 - pokud vše funguje tak přejdeme k testu PZEM004T  
 - vymažeme konfiguraci pro PZEM017 a nahrajeme novou jen pro PZEM004T   
@@ -111,7 +123,7 @@ sensor:
     update_interval: 1s
 ```
 
-Pokud tedy vše funguje potřebujeme u PZEM004T změnit adresu jelikož mají oba PZEM defaultní stejnou 0x01 adresu.
+Pokud tedy vše funguje potřebujeme u PZEM004T změnit adresu jelikož mají oba PZEM defaultní stejnou 0x01 adresu.  
 
 **PZEM004Tv3 - změna adresy**
 - vymažemé původní kód a nahradíme sekvencí pro automatické přepsání adresy po bootu
@@ -191,7 +203,7 @@ sensor:
     power:
       name: "PZEM-003 Power"
     update_interval: 1s
-    
+    address: 0x01 # defaultní adresa
   - platform: pzemac # PZEM004Tv3
     current:
       name: "PZEM-004T V3 Current"
@@ -202,7 +214,7 @@ sensor:
     power:
       name: "PZEM-004T V3 Power"
     update_interval: 1s
-    address: 0x03 # adresa na kterou jsme manuálně přepsali 
+    address: 0x03 # nová adresa 
 ```
 
 
@@ -213,8 +225,4 @@ sensor:
 [link](https://hassiohelp.eu/2019/03/27/pzem-016/)
 [link](https://github.com/Gio-dot/PZEM-016-OLED-2-OUT-ESPHome)
 [link](https://esphome.io/components/sensor/pzemdc.html)
-[link]()
-[link]()
-
-
 
