@@ -223,9 +223,9 @@ sensor:
 
 # Zdroje:
 
-- pzem16: [link](https://github.com/Gio-dot/PZEM-016-OLED-2-OUT-ESPHome/blob/master/wemos_d1_pzem016_display.yaml)  
-- tasmota: [link](https://github.com/arendst/Tasmota/issues/3694)  
-- pzem16: [link](https://hassiohelp.eu/2019/03/27/pzem-016/)  
-- pzem16: [link](https://github.com/Gio-dot/PZEM-016-OLED-2-OUT-ESPHome)  
-- esphome: [link](https://esphome.io/components/sensor/pzemdc.html)  
+- pzem16 git: [LINK](https://github.com/Gio-dot/PZEM-016-OLED-2-OUT-ESPHome/blob/master/wemos_d1_pzem016_display.yaml)  
+- tasmota git: [LINK](https://github.com/arendst/Tasmota/issues/3694)  
+- pzem16 diy projekt: [LINK](https://hassiohelp.eu/2019/03/27/pzem-016/)  
+- pzem16 git: [LINK](https://github.com/Gio-dot/PZEM-016-OLED-2-OUT-ESPHome)  
+- esphome: [LINK](https://esphome.io/components/sensor/pzemdc.html)  
 
