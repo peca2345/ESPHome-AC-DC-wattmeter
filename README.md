@@ -129,7 +129,8 @@ Pokud tedy vše funguje potřebujeme u PZEM004T změnit adresu jelikož mají ob
 **PZEM-004Tv3 - změna adresy**
 
 - vymažemé původní kód a nahradíme sekvencí pro automatické přepsání adresy po bootu
-- jakmile nahrajeme do ESP tak ho restartujeme a sekvenci vymažeme a vložíme konfig pro PZEM017 i PZEM004T
+- jakmile nahrajeme do ESP tak ho restartujeme a tím se přepíše adresa z defaultní 0x01 na 0x03
+- po přepsání tento kód vymažte z yamlu!
 
 ```
 esphome:
