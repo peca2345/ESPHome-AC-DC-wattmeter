@@ -1,4 +1,4 @@
-# ESPHome AC/DC wattmeter pro FVE ohřev vody
+# ESPHome AC/DC wattmeter pro FVE
 
 ## Popis:
 
