@@ -20,17 +20,17 @@
 
 ## ESP32E 1ch relay board:
 
-- z neznámého důvodu je relé připojeno na UART2_RX - GPIO16.  
-- díky tomu při používání UARTu pro PZEM dochází ke spínání relé.  
-- řešením je přerušení cesty mezi GPIO16 a relé. V případě potřeby použití relé můžete cestu napojit na jiný GPIO.  
+- z neznámého důvodu je relé připojeno na UART2_RX - GPIO16
+- díky tomu při používání UARTu pro PZEM dochází ke spínání relé  
+- řešením je přerušení cesty mezi GPIO16 a relé. V případě potřeby použití relé můžete cestu napojit na jiný GPIO  
 
 ![img](https://user-images.githubusercontent.com/58307338/161399294-d6a7c2da-280d-4cb1-b927-bd970b2a0270.png)
 
 ## PZEM-017 DC wattmeter:  
 
-- PZEM-017 používá pro komunikaci rozhraní RS485 a standardně bychom museli signál převést z RS485 přes převodník zpět na UART.  
-- to je pro nás tedy zbytečné a můžeme odstranit RS485 přímo z PZEM a použít přímo jeho UART.  
-- odstraníme tedy RS485 rozhraní přímo ze základní desky a díky tomu můžeme a musíme pracovat s napětím 3V namísto původních 5V.  
+- PZEM-017 používá pro komunikaci rozhraní RS485 a standardně bychom museli signál převést z RS485 přes převodník zpět na UART  
+- to je pro nás tedy zbytečné a můžeme odstranit RS485 přímo z PZEM a použít přímo jeho UART  
+- odstraníme tedy RS485 rozhraní přímo ze základní desky a díky tomu můžeme a musíme pracovat s napětím 3V namísto původních 5V  
 
 **1. odstraňte IO U5 a rezistor R19 (na U5 stačí odpájet pin1 a R19 na mém PZEM017 nebyl vůbec osazen)**
 
