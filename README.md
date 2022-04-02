@@ -28,7 +28,7 @@ Odstraníme tedy RS485 rozhraní přímo ze základní desky a díky tomu může
 
 2. propojte optočlen U1 (pin4) s R19 (pin A) a  U2 (pin2) s R19 (pin B)  
 
-![obrazek](https://user-images.githubusercontent.com/58307338/161390474-626640a5-7194-4c75-9685-365ac3d32cd1.png)
+![obrazek](https://user-images.githubusercontent.com/58307338/161390574-faffdaa3-064c-4558-a6ed-4b30d7b8d41d.png)
 
 
 Odteď bude tedy na svorce A signál TX a na svorce B RX.  
