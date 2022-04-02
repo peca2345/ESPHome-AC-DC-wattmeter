@@ -7,7 +7,7 @@
 - DC měření ze solárních panelů je realizováno pomocí PZEM-017v1 a AC ze sítě díky PZEM-004Tv3
 
 ## Zařízení:
-- Bojler - Dražice LX ACDC/M+K 160l [manual](https://www.dzd-fv.cz/images/pdf/Navod_LX_ACDC_M_MKW_9_12_2020_CZ_6735552.pdf) [eshop](https://www.solar-eshop.cz/p/fotovoltaicky-ohrivac-lx-acdc-m-k-abc-160/)  
+- Bojler - Dražice LX ACDC/M+K 160l - [manual](https://www.dzd-fv.cz/images/pdf/Navod_LX_ACDC_M_MKW_9_12_2020_CZ_6735552.pdf) + [eshop](https://www.solar-eshop.cz/p/fotovoltaicky-ohrivac-lx-acdc-m-k-abc-160/)  
 - FV panely: 6ks Schutten Poly 250Wp  
 - MPPT regulátor Power Max   
 - ESP32E-wroom 1ch relay board - [ali](https://www.aliexpress.com/item/1005003721826557.html?spm=a2g0o.order_list.0.0.21ef1802yxt8wg)
