@@ -199,25 +199,26 @@ uart:
   stop_bits: 2
   
 sensor:
-  - platform: pzemdc # PZEM017
+  - platform: pzemdc # PZEM-017
     current:
-      name: "PZEM-003 Current"
+      name: "PZEM-017 Current"
     voltage:
-      name: "PZEM-003 Voltage"
+      name: "PZEM-017 Voltage"
     power:
-      name: "PZEM-003 Power"
-    update_interval: 1s
+      name: "PZEM-017 Power"
+    update_interval: 60s
     address: 0x01 # defaultní adresa
+    
   - platform: pzemac # PZEM004Tv3
     current:
-      name: "PZEM-004T V3 Current"
+      name: "PZEM-004T Current"
     voltage:
-      name: "PZEM-004T V3 Voltage"
+      name: "PZEM-004T Voltage"
     energy:
-      name: "PZEM-004T V3 Energy"
+      name: "PZEM-004T Energy"
     power:
-      name: "PZEM-004T V3 Power"
-    update_interval: 1s
+      name: "PZEM-004T Power"
+    update_interval: 60s
     address: 0x03 # nová adresa 
 ```
 
