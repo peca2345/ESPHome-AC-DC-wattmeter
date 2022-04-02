@@ -58,7 +58,7 @@ logger:
 ```
 
 
-**ESPHome yaml PZEM017:**  
+**ESPHome PZEM-017v1:**  
 
 - aby PZEM v HA zobrazoval hodnoty tak musí být přivedeno DC napětí na svorky pro měření!  
 - konkrétně jde o dvě krajní svorkovnice na straně microUSB konektoru. (první plus, druhá mínus)  
@@ -85,7 +85,7 @@ sensor:
     update_interval: 1s
 ```
 
-**ESPHome yaml PZEM004Tv3:** 
+**ESPHome PZEM-004Tv3:** 
 
 - pokud vše funguje tak přejdeme k testu PZEM004T  
 - vymažeme konfiguraci pro PZEM017 a nahrajeme novou jen pro PZEM004T   
@@ -126,7 +126,7 @@ sensor:
 
 Pokud tedy vše funguje potřebujeme u PZEM004T změnit adresu jelikož mají oba PZEM defaultní stejnou 0x01 adresu.  
 
-**PZEM004Tv3 - změna adresy**
+**PZEM-004Tv3 - změna adresy**
 
 - vymažemé původní kód a nahradíme sekvencí pro automatické přepsání adresy po bootu
 - jakmile nahrajeme do ESP tak ho restartujeme a sekvenci vymažeme a vložíme konfig pro PZEM017 i PZEM004T
