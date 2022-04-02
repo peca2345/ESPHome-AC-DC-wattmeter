@@ -26,8 +26,7 @@ Odstraníme tedy RS485 rozhraní přímo ze základní desky a díky tomu může
 
 ![obrazek](https://user-images.githubusercontent.com/58307338/161390331-cfa6a7f1-9662-453b-9f1b-0a01661cdbd1.png)
 
-**2. propojte optočlen U1 (pin4) s R19 (pin A) a  U2 (pin2) s R19 (pin B)** 
-
+**2. propojte optočlen U1 (pin4) s R19 (pin A) a  U2 (pin2) s R19 (pin B)**
 <img align="right" src="https://user-images.githubusercontent.com/58307338/161390733-d5335ec2-fc3a-471d-a5dd-d74d15787c85.png">
 Odteď bude tedy na svorce A signál TX a na svorce B RX.  
 Na ESP připojte GPIO1 (TX) na svorku B (RX) a GPIO3 (RX) na svorku A (TX)  
