@@ -9,7 +9,7 @@
 ## Komponenty:
 - Bojler - Dražice LX ACDC/M+K 160l - [manual](https://www.dzd-fv.cz/images/pdf/Navod_LX_ACDC_M_MKW_9_12_2020_CZ_6735552.pdf) + [eshop](https://www.solar-eshop.cz/p/fotovoltaicky-ohrivac-lx-acdc-m-k-abc-160/)  
 - FV panely: 6ks Schutten Poly 250Wp  
-- MPPT - XDC TPK 168-8/1-2,30 kW [manual](https://www.dzd-fv.cz/images/pdf/Nvod_k_instalaci_a_obsluze_LXDC_SET_4_8_2020_CZ.pdf)
+- MPPT - LXDC TPK 168-8/1-2,30 kW [manual](https://www.dzd-fv.cz/images/pdf/Nvod_k_instalaci_a_obsluze_LXDC_SET_4_8_2020_CZ.pdf)
 - MPPT - Logitex LXDC Power BOX 1-2kw [shop](https://www.solar-eshop.cz/p/optimalizer-mppt-lxdc-power-box-1-2kw-dc/)
 - ESP32E-wroom 1ch relay board - [ali](https://www.aliexpress.com/item/1005003721826557.html?spm=a2g0o.order_list.0.0.21ef1802yxt8wg)
 - DC wattmetr PZEM-017v1 DC 0-300V / 0-300A - [ali](https://www.aliexpress.com/item/1005003512627513.html?dp=61e453ee0fa2025c4ba43400&cn=ah&aff_fcid=626c53d6b82b4d029f71e5c94dd8dfed-1648930593001-05156-_d6jWDbY&aff_fsk=_d6jWDbY&aff_platform=link-c-tool&sk=_d6jWDbY&aff_trace_key=626c53d6b82b4d029f71e5c94dd8dfed-1648930593001-05156-_d6jWDbY&terminal_id=0e7620c244a44f52b506ba9c9eb9f926&afSmartRedirect=y)
